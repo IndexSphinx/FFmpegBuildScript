@@ -157,6 +157,9 @@ def build_android(ffmpeg_path: str, ndk_path: str, platform: AndroidPlatforms, a
     else:
         pass
 
+    # EXTRA_CFLAGS="-I./x264/include"
+    # EXTRA_LDFLAGS="-L./x264/lib"
+
     CC = TOOLCHAIN + "/" + TARGET + str(API) + "-clang"
     CXX = TOOLCHAIN + "/" + TARGET + str(API) + "-clang++"
     CFLAG = "\"-D__ANDROID_API__=" + \
